@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>MERN class _ 14</title>
+  </head>
+  <style>
+    form.form-inline {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: baseline;
+    }
+    .wraper {
+      width: 480px;
+    }
+
+    span {
+      color: white;
+      background: darkmagenta;
+      border-radius: 5px;
+      padding: 0px 10px 0px 10px;
+    }
+    .list-group-item {
+      display: flex;
+      justify-content: space-between;
+    }
+    .list-group-item .close {
+      border: none;
+    }
+    div#show_counter {
+      text-align: center;
+      font-size: 65px;
+      font-weight: 700;
+      color: darkviolet;
+      background: linear-gradient(45deg, #c12977, #87fb08e3);
+    }
+    .remaining_text {
+      display: none;
+      color: #3e0dff;
+      font-size: 35px;
+      text-align: center;
+    }
+    .counter_name {
+      background: linear-gradient(45deg, #c12977, #87fb08e3);
+    }
+    .counter_text {
+      font-size: 25px;
+      display: flex;
+      justify-content: space-around;
+      display: none;
+    }
+    .counter_text span {
+      background: none;
+    }
+  </style>
+  <body>
+    <div class="card shadow wraper m-auto">
+      <div class="card-body">
+        <h2>Add to-do list....</h2>
+        <form id="todo_form" class="form-inline">
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="text"
+              name="text"
+              id="text"
+              placeholder="Add to-do List"
+            />
+          </div>
+          <div class="form-group">
+            <select class="form-control" name="value_condition" id="select">
+              <option value="">-Select-</option>
+              <option value="Important">Important</option>
+              <option value="normel">Normel</option>
+              <option value="unnecessary">Not necessary</option>
+              <option value="optional">Optional</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input
+              class="btn btn-success"
+              type="submit"
+              name="btn"
+              id="submit"
+              value="Add List"
+            />
+          </div>
+        </form>
+      </div>
+
+      <ul id="list-group" class="list-group"></ul>
+    </div>
+
+    <div class="card wraper m-auto">
+      <div class="card-body">
+        <h2>Fiver order counter.....</h2>
+        <form id="counter_form" class="form-inline" action="">
+          <div class="form-group">
+            <label for="date"
+              >Date : <input type="date" name="date" id="date"
+            /></label>
+          </div>
+          <div class="form-group">
+            <label for="time"
+              >Time : <input type="time" name="time" id="time"
+            /></label>
+          </div>
+          <div class="form-group">
+            <input class="btn btn-success" type="submit" value="Start Order" />
+          </div>
+        </form>
+      </div>
+      <div class="counter_name">
+        <div class="remaining_text">You have remaining ......</div>
+        <div class="counter_text">
+          <span>Day</span> <span>Hour</span> <span>Munit</span>
+          <span> Second</span>
+        </div>
+      </div>
+      <div id="show_counter"></div>
+    </div>
+
+    <!-- Age calculation apps -->
+    <div class="card wraper m-auto">
+      <div class="card-body">
+        <div class="h2">Age calculator</div>
+        <form id="age_cal_form" class="form-inline justify-content-between ">
+          <div class="form-group">
+            <label for="birth_date"
+              >Date of birth : </br> <input type="date" name="birth_date" id="birth_date"
+            /></label>
+          </div>
+          <input class="btn btn-success" type="submit" value="Check age" />
+        </form>
+        <div class="show_age"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
