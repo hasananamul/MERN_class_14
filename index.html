@@ -47,7 +47,7 @@
       font-size: 35px;
       text-align: center;
     }
-    .counter_name {
+    .counter_name,.show_age {
       background: linear-gradient(45deg, #c12977, #87fb08e3);
     }
     .counter_text {
@@ -59,6 +59,20 @@
     .counter_text span {
       background: none;
     }
+.year,.month,.day,.hour,.munit,.second {
+    background-color: #aab1b1;
+    color: maroon;
+    font-size: 25px;
+    padding-left: 15px;
+}
+.month,.hour,.second{
+  background-color: #d1eb7b;
+}
+    .show_age_text p {
+    font-size: 30px;
+    text-align: center;
+    color: floralwhite;
+}
   </style>
   <body>
     <div class="card shadow wraper m-auto">
@@ -139,7 +153,17 @@
           </div>
           <input class="btn btn-success" type="submit" value="Check age" />
         </form>
-        <div class="show_age"></div>
+
+        <div class="show_age">
+          <div class="show_age_text"></div>
+          <div class="year"></div>
+          <div class="month"></div>
+          <div class="day"></div>
+          <div class="hour"></div>
+          <div class="munit"></div>
+          <div class="second"></div>
+        </div>
+          
       </div>
     </div>
     <script src="script.js"></script>

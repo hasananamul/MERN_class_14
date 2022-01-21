@@ -104,6 +104,7 @@ counter_form.addEventListener("submit", function (e) {
 /**
  * Age calculation
  */
+
 age_cal_form.addEventListener("submit", function (e) {
   e.preventDefault();
   let birth_date = this.querySelector("input[type=date]").value;
@@ -117,13 +118,21 @@ age_cal_form.addEventListener("submit", function (e) {
   let total_d = Math.floor(total_h / 24);
   let total_mont = Math.floor(total_d / 30);
   let total_y = Math.floor(total_mont / 12);
-  console.log(total_d);
-  let show_age = document.querySelector(".show_age");
-  show_age.innerHTML = `<br> You are ${total_y} year's old </br>
-  Month : ${total_mont} </br>
-  Days : ${total_d} </br>
-  Hours = ${total_h} </br>
-  Munits : ${total_m} </br>
-  Second : ${total_s}
-  </p>`;
+
+  // show_age.innerText = "  You age is ...... ";
+  let show_age_text = (document.querySelector(
+    ".show_age_text"
+  ).innerHTML = `<p>Your age is.....</p>`);
+  let show_year = (document.querySelector(".year").innerText =
+    "Year : " + total_y);
+  let show_month = (document.querySelector(".month").innerHTML =
+    "Month : " + total_mont);
+  let show_day = (document.querySelector(".day").innerHTML =
+    "Day : " + total_d);
+  let show_hour = (document.querySelector(".hour").innerHTML =
+    "Hours : " + total_h);
+  let show_munit = (document.querySelector(".munit").innerHTML =
+    "Munits : " + total_m);
+  let show_second = (document.querySelector(".second").innerHTML =
+    "Seconds : " + total_s);
 });
