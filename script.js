@@ -112,12 +112,19 @@ age_cal_form.addEventListener("submit", function (e) {
   let current_date = new Date().getTime();
   let input_birth_date = new Date(birth_date).getTime();
   let date_different = current_date - input_birth_date;
+
+  //Total different calculation
   let total_s = Math.floor(date_different / 1000);
   let total_m = Math.floor(total_s / 60);
   let total_h = Math.floor(total_m / 60);
   let total_d = Math.floor(total_h / 24);
   let total_mont = Math.floor(total_d / 30);
   let total_y = Math.floor(total_mont / 12);
+
+  //present different calculation
+
+  let month = total_mont - total_y * 12;
+  let day = total_d - total_y * 12 * 30 - month * 30;
 
   // show_age.innerText = "  You age is ...... ";
   let show_age_text = (document.querySelector(
@@ -126,13 +133,12 @@ age_cal_form.addEventListener("submit", function (e) {
   let show_year = (document.querySelector(".year").innerText =
     "Year : " + total_y);
   let show_month = (document.querySelector(".month").innerHTML =
-    "Month : " + total_mont);
-  let show_day = (document.querySelector(".day").innerHTML =
-    "Day : " + total_d);
+    "Month : " + month);
+  let show_day = (document.querySelector(".day").innerHTML = "Day : " + day);
   let show_hour = (document.querySelector(".hour").innerHTML =
-    "Hours : " + total_h);
+    "Your are speend your life " + total_h + " Hours");
   let show_munit = (document.querySelector(".munit").innerHTML =
-    "Munits : " + total_m);
+    "Your are speend your life " + total_m + " Munits");
   let show_second = (document.querySelector(".second").innerHTML =
-    "Seconds : " + total_s);
+    "Your are speend your life " + total_s + " Seconds");
 });
