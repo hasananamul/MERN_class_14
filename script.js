@@ -130,15 +130,13 @@ age_cal_form.addEventListener("submit", function (e) {
   let show_age_text = (document.querySelector(
     ".show_age_text"
   ).innerHTML = `<p>Your age is.....</p>`);
-  let show_year = (document.querySelector(".year").innerText =
-    "Year : " + total_y);
-  let show_month = (document.querySelector(".month").innerHTML =
-    "Month : " + month);
-  let show_day = (document.querySelector(".day").innerHTML = "Day : " + day);
-  let show_hour = (document.querySelector(".hour").innerHTML =
-    "Your are speend your life " + total_h + " Hours");
-  let show_munit = (document.querySelector(".munit").innerHTML =
-    "Your are speend your life " + total_m + " Munits");
-  let show_second = (document.querySelector(".second").innerHTML =
-    "Your are speend your life " + total_s + " Seconds");
+  document.querySelector(".year").innerText = "Year : " + total_y;
+  document.querySelector(".month").innerHTML = "Month : " + month;
+  document.querySelector(".day").innerHTML = "Day : " + day;
+  document.querySelector(".hour").innerHTML =
+    "Your are speend your life " + total_h + " Hours";
+  document.querySelector(".munit").innerHTML =
+    "Your are speend your life " + total_m + " Munits";
+  document.querySelector(".second").innerHTML =
+    "Your are speend your life " + total_s + " Seconds";
 });
